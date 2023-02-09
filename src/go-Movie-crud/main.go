@@ -81,11 +81,11 @@ func main() {
 	r := mux.NewRouter()
 
 	movies = append(movies, Movie{ID: "1", Isbn: "436544", Title: "Movie One", Director: &Director{firstname: "Nitin", lastname: "Chauhan"}})
-	movies = append(movies, Movie{ID: "2", Isbn: "434344", Title: "Movie Two", Director: &Director{firstname: "Virat", lastname: "Kolhi"}})
+	movies = append(movies, Movie{ID: "2", Isbn: "434344", Title: "Movie Two", Director: &Director{firstname: "Virat", lastname: "Kohli"}})
 
 	r.HandleFunc("/movies", getMovies).Methods("GET")
 	r.HandleFunc("/movies/{id}", getMovie).Methods("GET")
-	r.HandleFunc("/movies", createMovie).Methods("POST")
+	r.HandleFunc("/movie", createMovie).Methods("POST")
 	r.HandleFunc("/movies/{id}", updateMovie).Methods("PUT")
 	r.HandleFunc("/movies/{id}", deleteMovie).Methods("DELETE")
 
