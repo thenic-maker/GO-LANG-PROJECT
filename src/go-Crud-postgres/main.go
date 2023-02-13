@@ -74,24 +74,24 @@ func main() {
 	var name string
 	var course string
 	db := ConnectionPostgresDB()
-	dbName := "testdb"
-	_, err := db.Exec("create database " + dbName)
-	if err != nil {
-		//handle the error
-		fmt.Println("hello")
-		fmt.Println(err)
-	}
-	_, err = db.Exec("\\c " + dbName)
-	if err != nil {
-		//handle the error
-		fmt.Println(err)
-	}
-	//Then execute your query for creating table
-	_, err = db.Exec("CREATE TABLE student( id integer, Name TEXT, Course TEXT )")
+	// dbName := "testdb"
+	// _, err := db.Exec("create database " + dbName)
+	// if err != nil {
+	// 	//handle the error
+	// 	fmt.Println("hello")
+	// 	fmt.Println(err)
+	// }
+	// _, err = db.Exec("\\c " + dbName)
+	// if err != nil {
+	// 	//handle the error
+	// 	fmt.Println(err)
+	// }
+	// //Then execute your query for creating table
+	// _, err = db.Exec("CREATE TABLE student( id integer, Name TEXT, Course TEXT )")
 
-	if err != nil {
-		fmt.Println(err)
-	}
+	// if err != nil {
+	// 	fmt.Println(err)
+	// }
 	for {
 		fmt.Println("\nEnter the choice")
 
